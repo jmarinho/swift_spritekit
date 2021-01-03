@@ -19,7 +19,7 @@ class GameViewController: UIViewController {
             if let scene = SKScene(fileNamed: "GameScene") {
                 scene.size = CGSize(width: 500, height: 1000)
                 // Set the scale mode to scale to fit the window
-                scene.scaleMode = .fill
+                scene.scaleMode = .aspectFit
 
                 // Present the scene
                 view.presentScene(scene)
@@ -33,7 +33,7 @@ class GameViewController: UIViewController {
     }
 
     override var shouldAutorotate: Bool {
-        return true
+        return false
     }
 
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
